@@ -1,0 +1,16 @@
+version: "3"
+
+dotenv:
+  - .env.task
+
+tasks:
+  install:
+    desc: Dependency install
+    cmds:
+      - npm i
+      - npm shrinkwrap
+
+  publish:
+    desc: Publish to NPM
+    cmds:
+      - npm publish --access public
