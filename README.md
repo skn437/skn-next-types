@@ -23,7 +23,7 @@
 - An interface taking a generic that has `params` property of type `Record<T, string>`
 - `ParamProps` is the prop type for Next.js dynamic route `page.tsx` default exported server component.
 - `ParamProps` generic type is actually a string which is the name of the slug i.e. the name of the dynamic id
-- The dynamic id can have names like: "slug", "id" etc which becomes the directory name like: [slug], [id] etc
+- The dynamic id can have names like: "slug", "id" etc. which becomes the directory name like: [slug], [id] etc
 - For usage instruction, see `Usage` section
 
 ### **`GenerateMetadata` Type**
@@ -82,9 +82,11 @@
 
 ### Now Inside your Next.js 14 Project, use the package like this (Just an example)
 
-#### (1) For any dynamic routes, use like this
+#### **_`ParamProps`, `GenerateMetadata` & `GenerateStaticParams` Types:_**
 
-> ```tsx
+#### For any dynamic routes, use like this
+
+> ```typescript jsx
 > // Location: app/users/[slug]/page.tsx
 > // Dynamic id: slug
 > import type {
@@ -96,15 +98,16 @@
 > // Generic type here `slug` as the dynamic id is that
 > export const generateMetadata: GenerateMetadata<"slug"> = async (props) => {
 >   const { slug } = props.params;
->   // some codes here
+>   // some codes here...
 >   return {
->     // some codes here
+>     // some codes here...
 >   };
 > };
 >
 > // Generic type here `slug` as the dynamic id is that
 > export const generateStaticParams: GenerateStaticParams<"slug"> = async () => {
->   // your code for generating static params and you'll get type safe dynamic route: `slug`
+>   // your code for generating static params here...
+>   // you'll get type safe dynamic route: `slug`
 > };
 >
 > // Generic type here `slug` as the dynamic id is that
@@ -117,16 +120,21 @@
 >
 > ```
 
-#### (2) For `error.tsx` files, use like this
+#### **_`NextErrorProps` Type:_**
 
-> ```tsx
+#### For `error.tsx` files, use like this
+
+> ```typescript jsx
 > "use client";
 >
 > import type { NextErrorProps } from "next/types";
 >
 > const Error: React.FC<NextErrorProps> = (props) => {
 >   const { error, reset } = props;
->   // some codes here
+>   // some codes here...
+>   return (
+>     <div>something...</div>
+>   );
 > };
 > ```
 
