@@ -90,9 +90,9 @@
 > // Location: app/users/[slug]/page.tsx
 > // Dynamic id: slug
 > import type {
-> 	GenerateMetadata,
-> 	GenerateStaticParams,
-> 	ParamProps,
+>   GenerateMetadata,
+>   GenerateStaticParams,
+>   ParamProps,
 > } from "next/types";
 >
 > // Generic type here `slug` as the dynamic id is that
