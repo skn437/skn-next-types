@@ -53,8 +53,21 @@
 
 ## **_Requirements:_**
 
-- 💀 Minimum React Version: `18`
-- 💀 Minimum Next.js Version: `14`
+### This library has peer dependency for React & React DOM of minimum 18.3.1. It may or may not work on 19.x
+
+### This library is intended to be used in Next.js of minimum 14.2.3. It may or may not work on 15.x
+
+- 💀 Minimum [react](https://www.npmjs.com/package/react) Version: `18.3.1`
+- 💀 Minimum [@types/react](https://www.npmjs.com/package/@types/react) Version: `18.3.3`
+- 💀 Minimum [react-dom](https://www.npmjs.com/package/react-dom) Version: `18.3.1`
+- 💀 Minimum [@types/react-dom](https://www.npmjs.com/package/@types/react-dom) Version: `18.3.0`
+- 💀 Minimum [next](https://www.npmjs.com/package/next) Version: `14.2.3`
+
+&nbsp;
+
+## **_Complementary Libraries:_**
+
+- [@best-skn/react-types](https://www.npmjs.com/package/@best-skn/react-types)
 
 &nbsp;
 
@@ -63,7 +76,7 @@
 ### To install the package, type the following in console
 
 > ```zsh
-> npm i -D @best-skn/next-types
+> npm add -D @best-skn/next-types
 > #or
 > yarn add -D @best-skn/next-types
 > #or

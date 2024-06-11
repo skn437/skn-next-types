@@ -1,12 +1,11 @@
 {
   "name": "@best-skn/next-types",
   "description": "A Simple Type Definition Extension Library For Next.js 14",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "",
   "types": "index.d.ts",
   "files": [
-    "index.d.ts",
-    "npm-shrinkwrap.json"
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
@@ -24,15 +23,15 @@
     "url": "https://skn.best"
   },
   "license": "MIT",
-  "dependencies": {
-    "next": "^14.2.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
   "devDependencies": {
     "@types/node": "^20.14.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
     "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@types/react": ">= 18.3.3 < 19",
+    "@types/react-dom": ">= 18.3.0 < 19",
+    "next": ">= 14.2.3 < 15",
+    "react": ">= 18.3.1 < 19",
+    "react-dom": ">= 18.3.1 < 19"
   }
 }

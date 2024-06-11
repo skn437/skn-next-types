@@ -4,13 +4,21 @@ dotenv:
   - .env.task
 
 tasks:
+  template:
+    desc: Template for tasks
+    cmds:
+      - bash {{.SCRIPT_PATH}}/{{.TASK_NAME}}.sh
+
   install:
     desc: Dependency install
     cmds:
-      - npm i
-      - npm shrinkwrap
+      - task: template
+        vars:
+          TASK_NAME: install
 
   publish:
     desc: Publish to NPM
     cmds:
-      - npm publish --access public
+      - task: template
+        vars:
+          TASK_NAME: publish
