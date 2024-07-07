@@ -91,7 +91,7 @@
 > import "@best-skn/next-types";
 > ```
 
-### Check your `tsconfig.json` if `includes` property has `**/*.ts` or not otherwise the type definition file may not work
+### Check your `tsconfig.json`, if `includes` property has `**/*.ts` & `**/*.tsx` or not otherwise the type definition file may not work
 
 ### Now Inside your Next.js 14 Project, use the package like this (Just an example)
 
@@ -106,7 +106,7 @@
 >   GenerateMetadata,
 >   GenerateStaticParams,
 >   ParamProps,
-> } from "next/types";
+> } from "next";
 >
 > // Generic type here `slug` as the dynamic id is that
 > export const generateMetadata: GenerateMetadata<"slug"> = async (props) => {
@@ -140,7 +140,7 @@
 > ```typescript jsx
 > "use client";
 >
-> import type { NextErrorProps } from "next/types";
+> import type { NextErrorProps } from "next";
 >
 > const Error: React.FC<NextErrorProps> = (props) => {
 >   const { error, reset } = props;

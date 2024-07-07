@@ -1,13 +1,13 @@
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 /**
  * SKN Next.js Type Extension Library
  *
  * @author SKN Shukhan
- * @version 1.0.2
+ * @version 1.1.0
  * @since 2024-06-10
  * */
-declare module "next/types" {
+declare module "next" {
   /**
    * An interface taking a generic that has `params` property of type `Record<T, string>`
    *
@@ -59,9 +59,7 @@ declare module "next/types" {
    *
    * @since v1.0.0
    * */
-  type GenerateMetadata<T extends string | number | symbol> = (
-    props: ParamProps<T>
-  ) => Promise<Metadata>;
+  type GenerateMetadata<T extends string | number | symbol> = (props: ParamProps<T>) => Promise<Metadata>;
 
   /**
    * The type for Next.js dynamic route `generateStaticParams` function
