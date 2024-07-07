@@ -1,7 +1,7 @@
 {
   "name": "@best-skn/next-types",
   "description": "A Simple Type Definition Extension Library For Next.js 14",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "",
   "types": "index.d.ts",
   "files": [
@@ -24,8 +24,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.14.2",
-    "typescript": "^5.4.5"
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "@types/react": ">= 18.3.3 < 19",

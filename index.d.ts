@@ -1,13 +1,13 @@
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 /**
  * SKN Next.js Type Extension Library
  *
  * @author SKN Shukhan
- * @version 1.0.2
+ * @version 1.1.0
  * @since 2024-06-10
  * */
-declare module "next/types" {
+declare module "next" {
   /**
    * An interface taking a generic that has `params` property of type `Record<T, string>`
    *
@@ -17,7 +17,7 @@ declare module "next/types" {
    * Example:
    *
    * ```typescript jsx
-   * import type { ParamProps } from "next/types";
+   * import type { ParamProps } from "next";
    *
    * // here `React.SC` type is from another package: `@best-skn/react-types`
    * const User: React.SC<ParamProps<"slug">> = async (props) => {
@@ -46,7 +46,7 @@ declare module "next/types" {
    * Example:
    *
    * ```typescript jsx
-   * import type { GenerateMetadata } from "next/types";
+   * import type { GenerateMetadata } from "next";
    *
    * export const generateMetadata: GenerateMetadata<"slug"> = async (props) => {
    *   const { slug } = props.params;
@@ -59,9 +59,7 @@ declare module "next/types" {
    *
    * @since v1.0.0
    * */
-  type GenerateMetadata<T extends string | number | symbol> = (
-    props: ParamProps<T>
-  ) => Promise<Metadata>;
+  type GenerateMetadata<T extends string | number | symbol> = (props: ParamProps<T>) => Promise<Metadata>;
 
   /**
    * The type for Next.js dynamic route `generateStaticParams` function
@@ -72,7 +70,7 @@ declare module "next/types" {
    * Example:
    *
    * ```typescript jsx
-   * import type { GenerateStaticParams } from "next/types";
+   * import type { GenerateStaticParams } from "next";
    *
    * export const generateStaticParams: GenerateStaticParams<"slug"> = async () => {
    *   // your code for generating static params here...
@@ -96,7 +94,7 @@ declare module "next/types" {
    * ```typescript jsx
    * "use client"
    *
-   * import type { NextErrorProps } from "next/types";
+   * import type { NextErrorProps } from "next";
    *
    * const Error: React.FC<NextErrorProps> = (props) => {
    *   const { error, reset } = props;

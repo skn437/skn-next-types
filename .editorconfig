@@ -11,25 +11,21 @@ insert_final_newline = true
 # (Please don't specify an indent_size here; that has too many unintended consequences.)
 
 # Kotlin files
+# noinspection EditorConfigKeyCorrectness
 [*.{kt,kts}]
 indent_size = 2
 
 # Ktlint official code style
 ktlint_code_style = ktlint_official
 ktlint_standard = enabled
-
 # Removes semicolons
-ktlint_standard_no-semi = disabled
-
+ktlint_standard_no-semi = enabled
 # Disallows using wildcard `*` in imports
-ktlint_standard_no-wildcard-imports = disabled
-
+ktlint_standard_no-wildcard-imports = enabled
 # Enforces naming Kotlin files according to the officially instructed conventions
 ktlint_standard_filename = enabled
-
 # Disallows `()` before trailing lambda
 ktlint_standard_unnecessary-parentheses-before-trailing-lambda = enabled
-
 # Turns `${}` into `$` in string template if only the variable name is used
 ktlint_standard_string-template = enabled
 
@@ -57,8 +53,8 @@ indent_size = 2
 [*.{html,css,sass,scss,md,mdx}]
 indent_size = 2
 
-# JSON, TOML, XML, YAML files
-[*.{json,toml,xml,yaml}]
+# IML, JSON, Properties, TOML, XML, YAML files
+[*.{iml,json,properties,toml,xml,yaml}]
 indent_size = 2
 
 # Shell Script, Text & Log files
@@ -71,6 +67,14 @@ indent_size = 2
 
 # Python files
 [*.{py,ipynb}]
+indent_size = 2
+
+# Ignore files
+[.*ignore]
+indent_size = 2
+
+# Docker files
+[Dockerfile]
 indent_size = 2
 
 # C, C++ files
