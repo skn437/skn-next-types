@@ -4,7 +4,7 @@ import type { Metadata } from "next";
  * SKN Next.js Type Extension Library
  *
  * @author SKN Shukhan
- * @version 1.1.0
+ * @version 1.1.1
  * @since 2024-06-10
  * */
 declare module "next" {

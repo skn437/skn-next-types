@@ -1,7 +1,7 @@
 {
   "name": "@best-skn/next-types",
   "description": "A Simple Type Definition Extension Library For Next.js 14",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "",
   "types": "index.d.ts",
   "files": [
